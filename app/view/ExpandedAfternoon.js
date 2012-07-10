@@ -1,3 +1,19 @@
+/**
+ * Copyright 2012, Raxa
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
 Ext.define('Med-Table.view.ExpandedAfternoon',{
     extend:'Ext.Panel',
     xtype:'expandedafternoon',
@@ -8,10 +24,8 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
     },
 
     config:{
-
         title:'AfternoonSchedule',
         iconCls:'time',
-
         layout:'vbox',
         items:[
             {   xtype: 'toolbar',
@@ -55,7 +69,6 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                         },
                         padding:'5px'
                     },
-
                     {
                         xtype: 'spacer'
                     },
@@ -71,10 +84,8 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                     }
                 ]
             },
-
             {
                 xtype:'container',
-
                 layout: 'hbox',
                 flex:1,
                 items: [
@@ -88,22 +99,13 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                                 xtype:'container',
                                 height: '286',
                                 style: 'background-color: #30cc18;',
-
-                                //docked:'top',
-                                //flex:1,
                                 layout : 'hbox',
-
-                                //height: 'auto',
-                                //ui:'light',
-                                items: [
+								items: [
                                     {xtype: "spacer"},
                                     {
                                         xtype: 'button',
                                         text: '<img src="resources/images/morning-small.png">',
                                         padding:'0px',
-
-                                        //padding:'5px',
-                                        //cls: 'morningImageButton',
                                         handler: function()
                                         {
                                             audio.stop();
@@ -127,34 +129,25 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                                         Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedMorning'))
                                     }
                                 }
-
-
                             }
                         ]
                     },
                     {
                         xtype: 'container',
-                        //id: 'morningctnr',
                         width :'625px',
-                        //flex: 1,
                         layout:'vbox',
                         items:[
                             {
                                 xtype:'container',
                                 height: '286',
                                 style: 'background-color: #1f60fe;',
-                                //docked:'top',
-                                //flex:1,
                                 layout : 'hbox',
-                                //height: 'auto',
-                                //ui:'light',
                                 items: [
                                     {xtype: "spacer"},
                                     {
                                         xtype: 'button',
                                         text: '<img src="resources/images/day_expanded-01-01.png">',
                                         padding:'0px',
-                                        //cls: 'morningImageButton',
                                         handler: function()
                                         {
                                             audio.stop();
@@ -168,8 +161,8 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                                 xtype:'list',
                                 flex:1,
                                 store:'AfternoonMedicines',
-                                itemTpl:'<img src="{medicineImage}"/> <h1>{name}</h1> <img src="{afterBeforeFood}"/> <img src="{dose}"/> <img src="{warning1}"/> <img src="{warning2}"/> <h1></h1> ',
-                                itemCls:'medicine-entry',
+                                itemTpl:'<img src="{medicineImage}"/> <img src="{afterBeforeFood}"/> <img src="{dose}"/> <img src="{warning1}"/> <img src="{warning2}"/> <h1>{name}</h1> <h1></h1> ',
+                                itemCls: 'medicine-entry-morning',
                                 style: 'background-color: #1f60fe;',
                                 listeners: {
                                     itemtap: function (view, index, item,record,e)
@@ -177,13 +170,11 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                                         //to add handler to play audio for tablet
                                     }
                                 }
-
                             }
                         ]
                     },
                     {
                         xtype: 'container',
-                        //id: 'morningctnr',
                         flex: 1,
                         layout:'vbox',
                         items:[
@@ -191,22 +182,13 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                                 xtype:'container',
                                 height: '286',
                                 style: 'background-color: #30cc18;',
-
-                                //docked:'top',
-                                //flex:1,
-                                layout : 'hbox',
-
-                                //height: 'auto',
-                                //ui:'light',
-                                items: [
+								layout : 'hbox',
+								items: [
                                     {xtype: "spacer"},
                                     {
                                         xtype: 'button',
                                         text: '<img src="resources/images/evening-small.png">',
                                         padding:'0px',
-
-                                        //padding:'5px',
-                                        //cls: 'morningImageButton',
                                         handler: function()
                                         {
                                             audio.stop();
@@ -230,13 +212,11 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                                         Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedEvening'))
                                     }
                                 }
-
                             }
                         ]
                     },
                     {
                         xtype: 'container',
-                        //id: 'morningctnr',
                         flex: 1,
                         layout:'vbox',
                         items:[
@@ -244,22 +224,13 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                                 xtype:'container',
                                 height: '286',
                                 style: 'background-color: #1f60fe;',
-
-                                //docked:'top',
-                                //flex:1,
                                 layout : 'hbox',
-
-                                //height: 'auto',
-                                //ui:'light',
                                 items: [
                                     {xtype: "spacer"},
                                     {
                                         xtype: 'button',
                                         text: '<img src="resources/images/night-small.png">',
                                         padding:'0px',
-
-                                        //padding:'5px',
-                                        //cls: 'morningImageButton',
                                         handler: function()
                                         {
                                             audio.stop();
@@ -283,14 +254,10 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                                         Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedNight'))
                                     }
                                 }
-
                             }
                         ]
                     }
                 ]}
         ]
-
-
     }
-
 });

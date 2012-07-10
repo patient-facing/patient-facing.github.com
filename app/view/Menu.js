@@ -1,117 +1,73 @@
+/**
+ * Copyright 2012, Raxa
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
 Ext.define('Med-Table.view.Menu', {
-    extend:'Ext.Panel',
-    xtype:'menu',
+    extend: 'Ext.Panel',
+    xtype: 'menu',
 
     initialize: function () {
         audio = (Ext.getCmp('audio2'));
         audio.toggle();
     },
 
-    config:{
-        title:'Menu',
-        iconCls:'home',
+    config: {
+        title: 'Menu',
+        iconCls: 'home',
+        items: [{
+            xtype: 'container',
+            items: [{
+                xtype: 'button',
+                text: '<img src="resources/images/medicine reminder_without drop shadow.png">',
+                handler: function () {
+                    audio.stop();
+                    Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.CalendarDisplay'))
+                },
 
-        items: [
-            /*{   xtype: 'toolbar',
-             ui:'light',
-             height : 'auto',
-             items: [
-             {
-             xtype: 'button',
-             text : '<img src="resources/images/home-small.png">',
-             handler: function()
-             {
-             Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Main'))
-             },
-             padding:'5px'
-             },
-             {
-             xtype: 'spacer'
-             },
-             {
-             xtype: 'button',
-             text : '<img src="resources/images/reminder-small.png">',
-             handler: function()
-             {
-             Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
-             },
-             padding:'5px'
-             },
-             {
-             xtype: 'button',
-             text : '<img src="resources/images/instructions-small.png">',
-             handler: function()
-             {
-             Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Instructions'))
-             },
-             padding:'5px'
-             },
-             {
-             xtype: 'button',
-             text : '<img src="resources/images/appoint-small.png">',
-             handler: function()
-             {
-             Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Menu'))
-             },
-             padding:'5px'
-             }
+                left: '372px',
+                top: '50px'
+            }, {
+                xtype: 'audio',
+                id: 'audio2',
+                hidden: true,
+                url: 'resources/Audio/Menu.mp3'
+            }, {
+                xtype: 'button',
+                text: '<img src="resources/images/instructions-01.png">',
+                handler: function () {
+                    audio.stop();
+                    Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Instructions'))
+                },
+                left: '709px',
+                top: '50px'
+            }, {
+                xtype: 'button',
+                text: '<img src="resources/images/next appointment-01.png">',
+                handler: function () {
+                    audio.stop();
+                    Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Appointment'))
+                },
+                left: '35px',
+                top: '50px'
+            }, {
+                xtype: 'toolbar',
+                title: "2",
+                ui: 'confirm',
+                disabled: 'true'
 
-             ]
-
-             },*/
-
-            {
-                xtype: 'container',
-                items:[
-                    {  xtype: 'button',
-                        //cls: 'instructionImageButton',
-                        text : '<img src="resources/images/medicine reminder_without drop shadow.png">',
-                        handler: function()
-                        {
-                            audio.stop();
-                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.CalendarDisplay'))
-                        },
-
-                        left: '372px',
-                        top: '50px'
-                    },
-                    {
-                        xtype : 'audio',
-                        id:'audio2',
-                        hidden: true,
-                        url   : 'resources/Audio/Menu.mp3'
-                    },
-
-                    {
-                        xtype: 'button',
-                        text : '<img src="resources/images/instructions-01.png">',
-                        handler: function()
-                        {
-                            audio.stop();
-                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Instructions'))
-                        },
-
-                        //cls: 'medicineReminderButton',
-                        left: '709px',
-                        top: '50px'
-                    },
-                    {
-                        xtype: 'button',
-                        text : '<img src="resources/images/next appointment-01.png">',
-                        handler: function()
-                        {
-                            audio.stop();
-                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Appointment'))
-                        },
-                        //cls: 'nextAppointmentButton',
-                        left: '35px',
-                        top: '50px'
-
-                    }
-                ]
-            }
-        ]
+            },
+            ]
+        }]
     }
 });
-
-
