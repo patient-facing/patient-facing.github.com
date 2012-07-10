@@ -28,6 +28,7 @@ Ext.define('Med-Table.view.Instructions', {
         layout: 'vbox',
         items: [{
             xtype: 'audio',
+            loop: true,
             id: 'audio3',
             hidden: true,
             url: 'resources/Audio/Instruction.mp3'

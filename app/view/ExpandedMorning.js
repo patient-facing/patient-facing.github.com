@@ -33,6 +33,7 @@ Ext.define('Med-Table.view.ExpandedMorning', {
             items: [{
                 xtype: 'audio',
                 id: 'audio1',
+                loop: true,
                 hidden: true,
                 url: 'resources/Audio/ExpandedScheduleScreen.mp3'
             }, {

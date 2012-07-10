@@ -30,6 +30,7 @@ Ext.define('Med-Table.view.Main', {
         pack: 'center',
         items: [{
             xtype: 'audio',
+            loop: true,
             id: 'audio1',
             hidden: true,
             url: 'resources/Audio/Welcome.mp3'

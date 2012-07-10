@@ -44,6 +44,7 @@ Ext.define('Med-Table.view.ExpandedAfternoon',{
                     },
                     {
                         xtype : 'audio',
+                        loop: true,
                         id:'audio1',
                         hidden: true,
                         url : 'resources/Audio/ExpandedScheduleScreen.mp3'

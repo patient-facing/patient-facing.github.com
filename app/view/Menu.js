@@ -39,6 +39,7 @@ Ext.define('Med-Table.view.Menu', {
                 top: '50px'
             }, {
                 xtype: 'audio',
+                loop: true,
                 id: 'audio2',
                 hidden: true,
                 url: 'resources/Audio/Menu.mp3'
