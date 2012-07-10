@@ -30,8 +30,8 @@ Ext.define('Med-Table.view.Main', {
         pack: 'center',
         items: [{
             xtype: 'audio',
-            loop: true,
             id: 'audio1',
+            loop: true,
             hidden: true,
             url: 'resources/Audio/Welcome.mp3'
         }, {
@@ -45,131 +45,14 @@ Ext.define('Med-Table.view.Main', {
             margin: 50,
             layout: "vbox",
             items: [{
-                xtype: 'textfield',
-                name: 'regno',
-                id: 'regno'
-            }, {
-                xtype: 'spacer',
-                height: 50
-            }, {
                 xtype: 'container',
                 layout: 'hbox',
                 flex: 1,
                 items: [{
-                    xtype: 'button',
-                    text: '१',
-                    badgeText: '1',
-                    handler: function () {
-                        var inp = Ext.getCmp('regno').getValue();
-                        Ext.getCmp('regno').setValue(inp + "1")
-                    },
-                    flex: 1
-                }, {
-                    xtype: 'button',
-                    text: '२',
-                    badgeText: '2',
-                    handler: function () {
-                        var inp = Ext.getCmp('regno').getValue();
-                        Ext.getCmp('regno').setValue(inp + "2")
-                    },
-                    flex: 1
-                }, {
-                    xtype: 'button',
-                    text: '३',
-                    badgeText: '3',
-                    handler: function () {
-                        var inp = Ext.getCmp('regno').getValue();
-                        Ext.getCmp('regno').setValue(inp + "3")
-                    },
-                    flex: 1
-                }]
-            }, {
-                xtype: 'container',
-                layout: 'hbox',
-                flex: 1,
-                items: [{
-                    xtype: 'button',
-                    text: '४',
-                    badgeText: '4',
-                    handler: function () {
-                        var inp = Ext.getCmp('regno').getValue();
-                        Ext.getCmp('regno').setValue(inp + "4")
-                    },
-                    flex: 1
-                }, {
-                    xtype: 'button',
-                    text: '५',
-                    badgeText: '5',
-                    handler: function () {
-                        var inp = Ext.getCmp('regno').getValue();
-                        Ext.getCmp('regno').setValue(inp + "5")
-                    },
-                    flex: 1
-                }, {
-                    xtype: 'button',
-                    text: '६',
-                    badgeText: '6',
-                    handler: function () {
-                        var inp = Ext.getCmp('regno').getValue();
-                        Ext.getCmp('regno').setValue(inp + "6")
-                    },
-                    flex: 1
-                }]
-            }, {
-                xtype: 'container',
-                layout: 'hbox',
-                flex: 1,
-                items: [{
-                    xtype: 'button',
-                    text: '७',
-                    badgeText: '7',
-                    handler: function () {
-                        var inp = Ext.getCmp('regno').getValue();
-                        Ext.getCmp('regno').setValue(inp + "7")
-                    },
-                    flex: 1
-                }, {
-                    xtype: 'button',
-                    text: '८',
-                    badgeText: '8',
-                    handler: function () {
-                        var inp = Ext.getCmp('regno').getValue();
-                        Ext.getCmp('regno').setValue(inp + "8")
-                    },
-                    flex: 1
-                }, {
-                    xtype: 'button',
-                    text: '९',
-                    badgeText: '9',
-                    handler: function () {
-                        var inp = Ext.getCmp('regno').getValue();
-                        Ext.getCmp('regno').setValue(inp + "9")
-                    },
-                    flex: 1
-                }]
-            }, {
-                xtype: 'container',
-                layout: 'hbox',
-                flex: 1,
-                items: [{
-                    xtype: 'button',
-                    text: '<img src="resources/images/backspace1.png" height="60">',
-                    handler: function () {
-                        var inp = Ext.getCmp('regno').getValue();
-                        inp = inp.slice(0, -1);
-                        Ext.getCmp('regno').setValue(inp)
-                    },
-                    ui: 'decline',
-                    flex: 1
-                }, {
-                    xtype: 'button',
-                    text: '०',
-                    badgeText: '0',
-                    handler: function () {
-                        var inp = Ext.getCmp('regno').getValue();
-                        Ext.getCmp('regno').setValue(inp + "0")
-                    },
-                    flex: 1
+                    xtype: 'textfield',
+                    name: 'regno',
+                    id: 'regno',
+                    flex: 3
                 }, {
                     xtype: 'button',
                     text: '<img src="resources/images/enter reg no.png" height="70px" width="70px">',
@@ -193,20 +76,20 @@ Ext.define('Med-Table.view.Main', {
                                 },
                                 centered: true,
                                 width: Ext.os.deviceType == 'Phone' ? 360 : 500,
-                                height: Ext.os.deviceType == 'Phone' ? 320 : 680,
+                                height: Ext.os.deviceType == 'Phone' ? 320 : 600,
                                 styleHtmlContent: true,
                                 items: [{
                                     docked: 'top',
                                     xtype: 'toolbar',
                                     title: 'कृपया पुष्टि करें',
-                                    height: '60px'
+                                    height: '70px'
                                 }, {
                                     xtype: 'image',
                                     src: 'resources/images/Sample Photo.jpg',
                                     height: '150px',
-                                    margin: '10 0 10 90'
+                                    margin: '10 0 10 130'
                                 }, {
-                                    html: '<h4>नाम: राजेश कुमार</h4><h4>उम्र: 25</h4><h4>वजन: 54 किलो</h4><h4>गांव: गनियारी</h4><h4>तहसील: तखतपुरर</h4>'
+                                    html: '<h3><br />नाम: राजेश कुमार<br />उम्र: 25<br />वजन: 54 किलो<br />गांव: गनियारी<br />तहसील: तखतपुरर</h3>'
                                 }, {
                                     docked: 'bottom',
                                     xtype: 'toolbar',
@@ -215,9 +98,8 @@ Ext.define('Med-Table.view.Main', {
                                         xtype: 'button',
                                         text: '<img src="resources/images/tick-01.png">',
                                         handler: function () {
-                                            Ext.getCmp('confirmpanel').destroy(),
-                                                audio.stop();
-                                                Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Menu'))
+                                            Ext.getCmp('confirmpanel').destroy(), audio.stop();
+                                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Menu'))
                                         },
                                         padding: '2px',
                                         left: '50px'
@@ -226,9 +108,8 @@ Ext.define('Med-Table.view.Main', {
                                         text: '<img src="resources/images/cross-01.png">',
                                         handler: function (hideOnMaskTap) {
                                             //Ext.getCmp('confirmpanel').hide(),
-                                            Ext.getCmp('confirmpanel').destroy(),
-                                                audio.stop();
-                                                Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Main'))
+                                            Ext.getCmp('confirmpanel').destroy(), audio.stop();
+                                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Main'))
                                         },
                                         padding: '2px',
                                         left: '240px'
@@ -241,6 +122,137 @@ Ext.define('Med-Table.view.Main', {
                     },
                     flex: 1
                 }]
+            }, {
+                xtype: 'spacer',
+                height: 50
+            }, {
+                xtype: 'container',
+                layout: 'hbox',
+                flex: 1,
+                items: [{
+                    xtype: 'button',
+                    text: '<img src="resources/images/1.png" height="80">',
+                    handler: function () {
+                        var inp = Ext.getCmp('regno').getValue();
+                        Ext.getCmp('regno').setValue(inp + "1")
+                    },
+                    flex: 1
+                }, {
+                    xtype: 'button',
+                    text: '<img src="resources/images/2.png" height="80">',
+                    handler: function () {
+                        var inp = Ext.getCmp('regno').getValue();
+                        Ext.getCmp('regno').setValue(inp + "2")
+                    },
+                    flex: 1
+                }, {
+                    xtype: 'button',
+                    text: '<img src="resources/images/3.png" height="80">',
+                    handler: function () {
+                        var inp = Ext.getCmp('regno').getValue();
+                        Ext.getCmp('regno').setValue(inp + "3")
+                    },
+                    flex: 1
+                }]
+            }, {
+                xtype: 'container',
+                layout: 'hbox',
+                flex: 1,
+                items: [{
+                    xtype: 'button',
+                    text: '<img src="resources/images/4.png" height="80">',
+                    handler: function () {
+                        var inp = Ext.getCmp('regno').getValue();
+                        Ext.getCmp('regno').setValue(inp + "4")
+                    },
+                    flex: 1
+                }, {
+                    xtype: 'button',
+                    text: '<img src="resources/images/5.png" height="80">',
+                    handler: function () {
+                        var inp = Ext.getCmp('regno').getValue();
+                        Ext.getCmp('regno').setValue(inp + "5")
+                    },
+                    flex: 1
+                }, {
+                    xtype: 'button',
+                    text: '<img src="resources/images/6.png" height="80">',
+                    handler: function () {
+                        var inp = Ext.getCmp('regno').getValue();
+                        Ext.getCmp('regno').setValue(inp + "6")
+                    },
+                    flex: 1
+                }]
+            }, {
+                xtype: 'container',
+                layout: 'hbox',
+                flex: 1,
+                items: [{
+                    xtype: 'button',
+                    text: '<img src="resources/images/7.png" height="80">',
+                    handler: function () {
+                        var inp = Ext.getCmp('regno').getValue();
+                        Ext.getCmp('regno').setValue(inp + "7")
+                    },
+                    flex: 1
+                }, {
+                    xtype: 'button',
+                    text: '<img src="resources/images/8.png" height="80">',
+                    handler: function () {
+                        var inp = Ext.getCmp('regno').getValue();
+                        Ext.getCmp('regno').setValue(inp + "8")
+                    },
+                    flex: 1
+                }, {
+                    xtype: 'button',
+                    text: '<img src="resources/images/9.png" height="80">',
+                    handler: function () {
+                        var inp = Ext.getCmp('regno').getValue();
+                        Ext.getCmp('regno').setValue(inp + "9")
+                    },
+                    flex: 1
+                }]
+            }, {
+                xtype: 'container',
+                layout: 'hbox',
+                flex: 1,
+                items: [
+                    /*{
+                     xtype: 'button',
+                     text: '<img src="resources/images/backspace1.png" height="60">',
+                     handler: function () {
+                     var inp = Ext.getCmp('regno').getValue();
+                     inp = inp.slice(0, -1);
+                     Ext.getCmp('regno').setValue(inp)
+                     },
+                     ui: 'decline',
+                     flex: 1
+                     },*/
+                    {
+                        xtype: 'button',
+                        text: '<img src="resources/images/hash.png" height="80">',
+                        handler: function () {
+                            var inp = Ext.getCmp('regno').getValue();
+                            Ext.getCmp('regno').setValue(inp + "#")
+                        },
+                        flex: 1
+                    }, {
+                        xtype: 'button',
+                        text: '<img src="resources/images/0.png" height="80">',
+                        handler: function () {
+                            var inp = Ext.getCmp('regno').getValue();
+                            Ext.getCmp('regno').setValue(inp + "0")
+                        },
+                        flex: 1
+                    }, {
+                        xtype: 'button',
+                        text: '<img src="resources/images/dot.png" height="80">',
+                        handler: function () {
+                            var inp = Ext.getCmp('regno').getValue();
+                            Ext.getCmp('regno').setValue(inp + ".")
+                        },
+                        flex: 1
+                    }]
             }]
         }]
     }

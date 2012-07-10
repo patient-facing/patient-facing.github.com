@@ -71,8 +71,8 @@ Ext.define('Med-Table.view.CalendarDisplay', {
             pack: 'center',
             items: [{
                 xtype: 'audio',
-                id: 'audio1',
                 loop: true,
+                id: 'audio1',
                 hidden: true,
                 url: 'resources/Audio/Calender.mp3'
             }, {

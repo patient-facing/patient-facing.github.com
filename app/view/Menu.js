@@ -39,8 +39,8 @@ Ext.define('Med-Table.view.Menu', {
                 top: '50px'
             }, {
                 xtype: 'audio',
-                loop: true,
                 id: 'audio2',
+                loop: true,
                 hidden: true,
                 url: 'resources/Audio/Menu.mp3'
             }, {
@@ -61,14 +61,7 @@ Ext.define('Med-Table.view.Menu', {
                 },
                 left: '35px',
                 top: '50px'
-            }, {
-                xtype: 'toolbar',
-                title: "2",
-                ui: 'confirm',
-                disabled: 'true'
-
-            },
-            ]
+            }]
         }]
     }
 });
