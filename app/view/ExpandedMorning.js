@@ -107,7 +107,10 @@ Ext.define('Med-Table.view.ExpandedMorning', {
                     style: 'background-color: #30cc18;',
                     listeners: {
                         itemtap: function (view, index, item, record, e) {
-                            //to add handler to play audio for tablet
+                            audio.stop();
+                            var rec = view.getStore().getAt(index);
+                            Ext.getCmp('audio1').setUrl(rec.get('audio'));
+                            audio.play();
                         }
                     }
                 }]
@@ -128,7 +131,8 @@ Ext.define('Med-Table.view.ExpandedMorning', {
                         padding: '0px',
                         handler: function () {
                             audio.stop();
-                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedAfternoon'))
+                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.ExpandedAfternoon'));
+
                         }
                     }, {
                         xtype: "spacer"

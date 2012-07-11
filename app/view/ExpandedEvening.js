@@ -179,8 +179,10 @@ Ext.define('Med-Table.view.ExpandedEvening', {
                     style: 'background-color: #30cc18;',
                     listeners: {
                         itemtap: function (view, index, item, record, e) {
-                            //to add handler to play audio for tablet
-                        }
+                            audio.stop();
+                            var rec = view.getStore().getAt(index);
+                            Ext.getCmp('audio1').setUrl(rec.get('audio'));
+                            audio.play();                        }
                     }
                 }]
             }, {
