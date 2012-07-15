@@ -89,7 +89,7 @@ Ext.define('Med-Table.view.CalendarDisplay', {
                      },*/
                     {
                         xtype: 'image',
-                        src: 'resources/images/july.png',
+                        src: 'resources/images/July.png',
                         height: '100px',
                         width: '975px'
                     }, {
