@@ -47,7 +47,8 @@ Ext.define('Med-Table.view.Main', {
             items: [{
                 xtype: 'container',
                 layout: 'hbox',
-                flex: 1,
+                //flex: 1,
+                height: '60px',
                 items: [{
                     xtype: 'textfield',
                     name: 'regno',
@@ -55,7 +56,7 @@ Ext.define('Med-Table.view.Main', {
                     flex: 3
                 }, {
                     xtype: 'button',
-                    text: '<img src="resources/images/enter reg no.png" height="70px" width="70px">',
+                    text: '<img src="resources/images/enter reg no.png" height="40px" width="60px">',
                     ui: 'confirm',
                     handler: function () {
                         if (!this.overlay) {
@@ -124,7 +125,7 @@ Ext.define('Med-Table.view.Main', {
                 }]
             }, {
                 xtype: 'spacer',
-                height: 50
+                height: 30
             }, {
                 xtype: 'container',
                 layout: 'hbox',

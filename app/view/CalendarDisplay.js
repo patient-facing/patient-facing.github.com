@@ -78,265 +78,270 @@ Ext.define('Med-Table.view.CalendarDisplay', {
             }, {
                 xtype: 'container',
                 flex: 1,
-                margin: 50,
+                margin: 25,
                 layout: "vbox",
-                items: [{
-                    xtype: 'toolbar',
-                    title: "जुलाई - 2012",
-                    ui: 'confirm',
-                    disabled: 'true'
-                }, {
-                    xtype: 'container',
-                    layout: 'hbox',
-                    height: '75px',
+                items: [
+                    /*{
+                     xtype: 'toolbar',
+                     title: '<font style="font-size: 30px;">जुलाई २०१२ - July 2012</font>',
+                     ui: 'confirm',
+                     disabled: 'true'
+                     },*/
+                    {
+                        xtype: 'image',
+                        src: 'resources/images/july.png',
+                        height: '100px',
+                        width: '975px'
+                    }, {
+                        xtype: 'container',
+                        layout: 'hbox',
+                        height: '75px',
 
-                    items: [{
-                        xtype: 'button',
-                        text: 'रवि',
-                        ui: 'action',
-                        disabled: 'true',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: 'सोम',
-                        ui: 'action',
-                        disabled: 'true',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: 'मंगल',
-                        ui: 'action',
-                        disabled: 'true',
-                        /*handler: function()
-                         {
-                         var inp = Ext.getCmp('regno').getValue();
-                         Ext.getCmp('regno').setValue(inp + "0")
-                         },*/
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: 'बुध',
-                        ui: 'action',
-                        disabled: 'true',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: 'गुरु',
-                        ui: 'action',
-                        disabled: 'true',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: 'शुक्र',
-                        ui: 'action',
-                        disabled: 'true',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: 'शनि',
-                        ui: 'action',
-                        disabled: 'true',
-                        flex: 1
-                    }
+                        items: [{
+                            xtype: 'button',
+                            text: 'रवि',
+                            ui: 'action',
+                            disabled: 'true',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: 'सोम',
+                            ui: 'action',
+                            disabled: 'true',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: 'मंगल',
+                            ui: 'action',
+                            disabled: 'true',
+                            /*handler: function()
+                             {
+                             var inp = Ext.getCmp('regno').getValue();
+                             Ext.getCmp('regno').setValue(inp + "0")
+                             },*/
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: 'बुध',
+                            ui: 'action',
+                            disabled: 'true',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: 'गुरु',
+                            ui: 'action',
+                            disabled: 'true',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: 'शुक्र',
+                            ui: 'action',
+                            disabled: 'true',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: 'शनि',
+                            ui: 'action',
+                            disabled: 'true',
+                            flex: 1
+                        }
 
-                    ]
-                }, {
-                    xtype: 'container',
-                    layout: 'hbox',
-                    height: '75px',
+                        ]
+                    }, {
+                        xtype: 'container',
+                        layout: 'hbox',
+                        height: '75px',
 
-                    items: [{
-                        xtype: 'button',
-                        text: '1',
-                        flex: 1
+                        items: [{
+                            xtype: 'button',
+                            text: '1',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '2',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '3',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '4',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '5',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '6',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '7',
+                            flex: 1
+                        }]
                     }, {
-                        xtype: 'button',
-                        text: '2',
-                        flex: 1
+                        xtype: 'container',
+                        layout: 'hbox',
+                        height: '75px',
+                        items: [{
+                            xtype: 'button',
+                            text: '8',
+                            handler: function () {
+                                audio.stop();
+                                Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
+                            },
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '9',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '10',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '11',
+                            handler: function () {
+                                audio.stop();
+                                Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
+                            },
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '12',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '13',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '14',
+                            flex: 1
+                        }]
                     }, {
-                        xtype: 'button',
-                        text: '3',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '4',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '5',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '6',
+                        xtype: 'container',
+                        layout: 'hbox',
+                        height: '75px',
 
-
-                        flex: 1
+                        items: [{
+                            xtype: 'button',
+                            ui: 'confirm',
+                            text: '15',
+                            handler: function () {
+                                audio.stop();
+                                Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
+                            },
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '16',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '17',
+                            handler: function () {
+                                audio.stop();
+                                Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
+                            },
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '18',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '19',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '20',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '21',
+                            flex: 1
+                        }]
                     }, {
-                        xtype: 'button',
-                        ui: 'confirm',
-                        text: '7',
-                        handler: function () {
-                            audio.stop();
-                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
-                        },
-                        flex: 1
+                        xtype: 'container',
+                        layout: 'hbox',
+                        height: '75px',
+                        items: [{
+                            xtype: 'button',
+                            text: '22',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '23',
+
+                            handler: function () {
+                                audio.stop();
+                                Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
+                            },
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '24',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '25',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '26',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '27',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '28',
+                            flex: 1
+                        }]
+                    }, {
+                        xtype: 'container',
+                        layout: 'hbox',
+                        height: '75px',
+
+                        items: [{
+                            xtype: 'button',
+                            text: '29',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '30',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '31',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '1',
+                            disabled: 'true',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '2',
+                            disabled: 'true',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '3',
+                            disabled: 'true',
+                            flex: 1
+                        }, {
+                            xtype: 'button',
+                            text: '4',
+                            disabled: 'true',
+                            flex: 1
+                        }]
                     }]
-                }, {
-                    xtype: 'container',
-                    layout: 'hbox',
-                    height: '75px',
-                    items: [{
-                        xtype: 'button',
-                        text: '8',
-                        handler: function () {
-                            audio.stop();
-                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
-                        },
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '9',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '10',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '11',
-                        handler: function () {
-                            audio.stop();
-                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
-                        },
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '12',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '13',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '14',
-                        flex: 1
-                    }]
-                }, {
-                    xtype: 'container',
-                    layout: 'hbox',
-                    height: '75px',
-
-                    items: [{
-                        xtype: 'button',
-                        text: '15',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '16',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '17',
-                        handler: function () {
-                            audio.stop();
-                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
-                        },
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '18',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '19',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '20',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '21',
-                        flex: 1
-                    }]
-                }, {
-                    xtype: 'container',
-                    layout: 'hbox',
-                    height: '75px',
-                    items: [{
-                        xtype: 'button',
-                        text: '22',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '23',
-
-                        handler: function () {
-                            audio.stop();
-                            Ext.Viewport.setActiveItem(Ext.create('Med-Table.view.Schedule'))
-                        },
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '24',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '25',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '26',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '27',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '28',
-                        flex: 1
-                    }]
-                }, {
-                    xtype: 'container',
-                    layout: 'hbox',
-                    height: '75px',
-
-                    items: [{
-                        xtype: 'button',
-                        text: '29',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '30',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '31',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '1',
-                        disabled: 'true',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '2',
-                        disabled: 'true',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '3',
-                        disabled: 'true',
-                        flex: 1
-                    }, {
-                        xtype: 'button',
-                        text: '4',
-                        disabled: 'true',
-                        flex: 1
-                    }]
-                }]
             }]
         }]
     }
