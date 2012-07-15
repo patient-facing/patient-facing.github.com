@@ -35,9 +35,9 @@ Steps to host the app on the locahost:
 
 2. You do not need to download or install Sencha separately to make the app run on your computer since the SDK is already included in the repo.
 
-3. Set up your HTTP server. You can use WAMP (for Windows) or XAMPP (for Linux distros or Mac OS X). Installing WAMP or XAMPP is pretty easy. Follow the instructions on the respective websites and you should be ready to go. I'm not detailing out the steps here since they are platform dependent. 
+3. Set up your HTTP server. You can use WAMP (for Windows) or XAMPP (for Linux distros or Mac OS X). Installing WAMP or XAMPP is pretty easy. Follow the instructions on the respective websites and you should be ready to go. The steps are not detailed here as it is platform dependent. 
 
-4. Once you have your HTTP server set up, place the downloaded in the localhost directory. (By default wamp uses a path like C:/wamp/www/ as it's localhost directory. XAMPP uses the htdocs folder for the same purpose). So, finally your directory structure should look something like (C:/wamp/www/JSS-MAS)
+4. Once you have your HTTP server set up, place the downloaded in the localhost directory. (By default wamp uses a path like C:/wamp/www/ as it's localhost directory. XAMPP uses the htdocs folder for the same purpose). So, finally your directory structure should look something like (C:/wamp/www/patient-facing)
 
 5. Fire up your webkit browser (Safari or Chrome).
 
